@@ -1,5 +1,6 @@
 package com.aepronunciation.ipa;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
 
@@ -128,6 +129,29 @@ public class SingleSound {
 
 		// returns null if no value found
 		return exampleThreeMap.get(singleSoundIpa);
+	}
+
+	public String getRandomFromAllowedSounds(Context context, ArrayList<String> sounds) {
+		if (singleSounds == null) {
+			singleSounds = context.getResources().getStringArray(
+					R.array.single_sounds);
+		}
+
+		if (sounds == null || sounds.isEmpty()) {
+			return getRandomIpa(context);
+		}
+
+		ArrayList<String> valid = new ArrayList<String>();
+		for (String s: sounds) {
+			for (int i = 0; i < singleSounds.length; i++) {
+				if (singleSounds[i] .equals(s)) {
+					valid.add(s);
+					break;
+				}
+			}
+		}
+		int soundIndex = random.nextInt(valid.size());
+		return valid.get(soundIndex);
 	}
 
 	// initialize the hashmap when new object created

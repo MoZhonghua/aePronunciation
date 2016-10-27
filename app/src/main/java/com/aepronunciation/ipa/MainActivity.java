@@ -13,7 +13,7 @@ public class MainActivity extends BaseActivity {
 
 		/*
 		 * if (savedInstanceState == null) {
-		 * getSupportFragmentManager().beginTransaction() .add(R.id.container,
+		 * getSupportFragmentManager().beginTransaction() .add(R.key_view_id.container,
 		 * new PlaceholderFragment()).commit(); }
 		 */
 	}

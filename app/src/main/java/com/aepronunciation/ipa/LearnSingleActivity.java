@@ -732,10 +732,10 @@ public class LearnSingleActivity extends BaseActivity implements
 		// get the ipa string
 		String ipa = tvIpaSymbol.getText().toString();
 
-		// use the string to look up the audio resource id
+		// use the string to look up the audio resource key_view_id
 		int soundId = singleSound.getExampleOneResourceId(ipa);
 
-		// use the id to load (and play) the sound
+		// use the key_view_id to load (and play) the sound
 		soundPool.load(this, soundId, PRIORITY);
 
 	}
@@ -745,10 +745,10 @@ public class LearnSingleActivity extends BaseActivity implements
 		// get the ipa string
 		String ipa = tvIpaSymbol.getText().toString();
 
-		// use the string to look up the audio resource id
+		// use the string to look up the audio resource key_view_id
 		int soundId = singleSound.getExampleTwoResourceId(ipa);
 
-		// use the id to load (and play) the sound
+		// use the key_view_id to load (and play) the sound
 		soundPool.load(this, soundId, PRIORITY);
 
 	}
@@ -758,10 +758,10 @@ public class LearnSingleActivity extends BaseActivity implements
 		// get the ipa string
 		String ipa = tvIpaSymbol.getText().toString();
 
-		// use the string to look up the audio resource id
+		// use the string to look up the audio resource key_view_id
 		int soundId = singleSound.getExampleThreeResourceId(ipa);
 
-		// use the id to load (and play) the sound
+		// use the key_view_id to load (and play) the sound
 		soundPool.load(this, soundId, PRIORITY);
 
 	}

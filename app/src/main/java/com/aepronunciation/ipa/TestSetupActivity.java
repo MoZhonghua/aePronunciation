@@ -122,7 +122,7 @@ public class TestSetupActivity extends BaseActivity {
 	public void onKeyTouched(String keyString) {
 	}
 
-	public void beginClick(View v) {
+	public void okClick(View v) {
 
 		// Name
 		String name = etName.getText().toString();

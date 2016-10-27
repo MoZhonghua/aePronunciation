@@ -53,7 +53,7 @@ public class HistoryTestDetailsActivity extends BaseActivity implements
 
 		// Get extras from Test Activity
 		Bundle bundle = getIntent().getExtras();
-		long id = bundle.getLong("id", 0);
+		long id = bundle.getLong("key_view_id", 0);
 
 		new GetTest().execute(id);
 
@@ -242,7 +242,7 @@ public class HistoryTestDetailsActivity extends BaseActivity implements
 
 		int soundId = -1;
 
-		// look up audio resource id for that sound
+		// look up audio resource key_view_id for that sound
 		if (testMode.equals("double")) {
 			soundId = doubleSound.getSoundResourceId(ipaSound);
 		} else { // single

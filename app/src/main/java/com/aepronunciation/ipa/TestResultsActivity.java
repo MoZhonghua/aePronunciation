@@ -313,7 +313,7 @@ public class TestResultsActivity extends BaseActivity implements
 
 		int soundId = -1;
 
-		// look up audio resource id for that sound
+		// look up audio resource key_view_id for that sound
 		if (testMode.equals("double")) {
 			soundId = doubleSound.getSoundResourceId(ipaSound);
 		} else { // single

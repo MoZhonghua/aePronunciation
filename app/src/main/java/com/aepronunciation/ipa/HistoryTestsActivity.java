@@ -124,7 +124,7 @@ public class HistoryTestsActivity extends BaseActivity implements
 		long index = testNumber;
 		
 		Intent intent = new Intent(this, HistoryTestDetailsActivity.class);
-		intent.putExtra("id", index);
+		intent.putExtra("key_view_id", index);
 		startActivity(intent);
 	}
 
