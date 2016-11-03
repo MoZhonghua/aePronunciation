@@ -313,14 +313,14 @@ public class PracticeDoubleActivity extends BaseActivity implements
 
 	}
 
-	protected void settingsClick(View v) {
+	public void settingsClick(View v) {
 		Intent intent = new Intent(this, SelectSoundActivity.class);
         intent.putExtra("doubleSounds", true);
 		intent.putExtra("allowedSounds", allowedSounds);
 		startActivityForResult(intent, SETTINGS_CODE);
 	}
 
-	protected void onActivityResult (int requestCode, int resultCode, Intent data) {
+	public void onActivityResult (int requestCode, int resultCode, Intent data) {
 		if (requestCode != SETTINGS_CODE || resultCode != RESULT_OK || data == null) {
 			return;
 		}

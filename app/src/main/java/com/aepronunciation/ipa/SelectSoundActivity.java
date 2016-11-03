@@ -69,7 +69,7 @@ public class SelectSoundActivity extends BaseActivity {
         keyboardFragment.selectAllConsonants(cbAllConsonants.isChecked());
     }
 
-    protected void okClick(View v) {
+    public void okClick(View v) {
         Intent intent = new Intent(this, PracticeDoubleActivity.class);
         ArrayList<String> selected = keyboardFragment.getSelectedSounds();
         intent.putExtra("selected", selected);
@@ -100,6 +100,10 @@ public class SelectSoundActivity extends BaseActivity {
         finish();
     }
 
+    public void cancelClick(View v) {
+        setResult(RESULT_CANCELED, null);
+        finish();
+    }
     private void showError(String msg) {
         Bundle args = new Bundle();
         args.putString("errorMessage", msg);
@@ -107,10 +111,5 @@ public class SelectSoundActivity extends BaseActivity {
         dialog.setArguments(args);
         dialog.show(getSupportFragmentManager(), "ErrorDialogFragmentTag");
         return;
-    }
-
-    protected void cancelClick(View v) {
-        setResult(RESULT_CANCELED, null);
-        finish();
     }
 }

@@ -345,7 +345,7 @@ public class PracticeSingleActivity extends BaseActivity implements
 
 	}
 
-	protected void settingsClick(View v) {
+	public void settingsClick(View v) {
 		Intent intent = new Intent(this, SelectSoundActivity.class);
         intent.putExtra("allowedSounds", allowedSounds);
 		startActivityForResult(intent, SETTINGS_CODE);
