@@ -10,7 +10,7 @@
         android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/okButtonLayout"
+        android:layout_above="@+id/beginButtonLayout"
         android:layout_alignParentTop="true" >
 
         <LinearLayout
@@ -110,7 +110,7 @@
     </ScrollView>
 
     <RelativeLayout
-        android:id="@id/okButtonLayout"
+        android:id="@id/beginButtonLayout"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -118,7 +118,7 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/button"
         android:clickable="true"
-        android:onClick="okClick"
+        android:onClick="beginClick"
         android:padding="15dp" >
 
         <com.aepronunciation.ipa.IpaTextView

@@ -301,8 +301,4 @@
     <string name="err_select_at_least_c_and_v">You must select at least one sound!</string>
     <string name="all_consonants">All Consonants</string>
     <string name="all_vowels">All Vowels</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
 </resources>

@@ -67,7 +67,7 @@ public class TestActivity extends BaseActivity implements
 		// create objects
 		tvQuestionNumber = (TextView) findViewById(R.id.tvQuestionNumber);
 		tvInputWindow = (TextView) findViewById(R.id.tvInputWindow);
-		// playButtonImage = (ImageView) findViewById(R.key_view_id.ivPlay);
+		// playButtonImage = (ImageView) findViewById(R.id.ivPlay);
 		playButton = (RelativeLayout) findViewById(R.id.playButtonLayout);
 		nextButtonImage = (ImageView) findViewById(R.id.ivNext);
 		nextButton = (RelativeLayout) findViewById(R.id.nextButtonLayout);
@@ -281,7 +281,7 @@ public class TestActivity extends BaseActivity implements
 
 		int soundId = -1;
 
-		// look up audio resource key_view_id for that sound
+		// look up audio resource id for that sound
 		if (testMode.equals("double")) {
 			soundId = doubleSound.getSoundResourceId(ipaSound);
 		} else { // single

@@ -82,10 +82,10 @@ public class LearnDoubleActivity extends BaseActivity implements
 		tvIpa = (TextView) v.findViewById(R.id.tvGridDoubleSound);
 		String ipa = tvIpa.getText().toString();
 
-		// use the string to look up the audio resource key_view_id
+		// use the string to look up the audio resource id
 		int soundId = doubleSound.getSoundResourceId(ipa);
 
-		// use the key_view_id to load (and play) the sound
+		// use the id to load (and play) the sound
 		soundPool.load(this, soundId, PRIORITY);
 
 	}
