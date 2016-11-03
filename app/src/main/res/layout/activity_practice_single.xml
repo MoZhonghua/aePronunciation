@@ -54,7 +54,6 @@
                 android:paddingRight="10dp">
 
             </LinearLayout>
-
         </LinearLayout>
 
         <RelativeLayout

@@ -29,7 +29,7 @@
     <string name="about_content">This app is free and open source software under the GPL license. If you have any questions, comments, or suggestions, then please leave a message.</string>
     <string name="about_contact">Contact</string>
     <string name="about_update">Check for updates</string>
-
+    
     <string name="title_main">Pronunciation</string>
     <string name="title_activity_learn">Learn</string>
     <string name="title_activity_learn_single">Learn Single Sounds</string>
@@ -55,8 +55,8 @@
     <string name="pref_number_questions_title">Default number of test questions</string>
     <string name="pref_number_questions_dialog">dialog title</string>
     <string name="pref_number_questions_default">50</string>
-
-
+    
+    
     <string name="key_11">p</string>
     <string name="key_12">t</string>
     <string name="key_13">k</string>
@@ -104,7 +104,7 @@
     <string name="key_65">ɪr</string>
     <string name="key_66">ɔr</string>
     <string name="key_67">ʔ</string>
-
+    
     <string name="p_description">/p/ is aspirated ([pʰ]) at the beginning of words but it is unaspirated ([p]) after /s/ and at the end of a word. Be careful not to read the third example /stɑpə/.</string>
     <string name="p_example1">pass\n/pæs/</string>
     <string name="p_example2">speak\n/spik/</string>
@@ -282,18 +282,18 @@
     <string name="ir_example2">weird\n/wɪrd/</string>
     <string name="ir_example3">here\n/hɪr/</string>
     <string name="or_description">The "ɔ" used in /ɔr/ is not the same sound as the /ɔ/ in this app. (This is because the /ɔ/ used to describe many American English words should be written /ɒ/.) The /ɔr/ sound begins with small rounded lips. It is more correctly written /ɔɹ/ according to IPA. It is pronounced as /ɔː/ in British English.</string>
-    <string name="or_example1">oars\n/ɔrz/</string>
+	<string name="or_example1">oars\n/ɔrz/</string>
     <string name="or_example2">north\n/nɔrθ/</string>
     <string name="or_example3">roar\n/rɔr/</string>
     <string name="glottal_stop_description">This sound is called a glottal stop. It is not usually taught in English textbooks in China, but it is an important part of American English pronunciation. Note the difference in the pronunciation of "put" here and in the example for the /ʊ/ sound. The /ʔ/ sound often replaces /t/, especially at the end of words and in middle of sentences.</string>
-    <string name="glottal_stop_example1">put\n/pʊʔ/</string>
+	<string name="glottal_stop_example1">put\n/pʊʔ/</string>
     <string name="glottal_stop_example2">button\n/\'bʌʔn/</string>
     <string name="glottal_stop_example3">uh-oh\n/\'ʌʔo/</string>
     <string name="flap_t_description">The /ɾ/ sound (not /r/) is called a flap t or an alveolar tap. It is not usually taught in English textbooks in China, but it is an important part of American English pronunciation. The /ɾ/ sound often replaces /t/, especially when /t/ comes between vowels. The /ɾ/ sound can also be written /d/, though this is not as accurate. In that case the above examples would be written /\'wɑdɚ/, /\'lɪdəl/, ɑnd /\'θɝdi/.</string>
-    <string name="flap_t_example1">water\n/\'wɑɾɚ/</string>
+	<string name="flap_t_example1">water\n/\'wɑɾɚ/</string>
     <string name="flap_t_example2">little\n/\'lɪɾəl/</string>
     <string name="flap_t_example3">thirty\n/\'θɝɾi/</string>
-
+    
     <string name="select_sounds_to_practice">Select sounds to practice</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
