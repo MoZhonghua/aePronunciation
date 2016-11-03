@@ -141,17 +141,8 @@ public class SingleSound {
 			return getRandomIpa(context);
 		}
 
-		ArrayList<String> valid = new ArrayList<String>();
-		for (String s: sounds) {
-			for (int i = 0; i < singleSounds.length; i++) {
-				if (singleSounds[i] .equals(s)) {
-					valid.add(s);
-					break;
-				}
-			}
-		}
-		int soundIndex = random.nextInt(valid.size());
-		return valid.get(soundIndex);
+		int soundIndex = random.nextInt(sounds.size());
+		return sounds.get(soundIndex);
 	}
 
 	// initialize the hashmap when new object created

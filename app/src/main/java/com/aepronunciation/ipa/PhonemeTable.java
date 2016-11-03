@@ -104,8 +104,8 @@ public class PhonemeTable {
         soundFlagsMap.put("ɔ", P_VOWEL);
         soundFlagsMap.put("ʊ", P_VOWEL);
         soundFlagsMap.put("u", P_VOWEL);
-        soundFlagsMap.put("ʌ", P_VOWEL | P_UNSTRESSED);
-        soundFlagsMap.put("ə", P_VOWEL);
+        soundFlagsMap.put("ʌ", P_VOWEL);
+        soundFlagsMap.put("ə", P_VOWEL | P_UNSTRESSED);
         soundFlagsMap.put("e", P_VOWEL);
         soundFlagsMap.put("aɪ", P_VOWEL);
         soundFlagsMap.put("aʊ", P_VOWEL);

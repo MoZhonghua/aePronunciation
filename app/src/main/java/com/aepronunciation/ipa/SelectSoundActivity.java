@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
@@ -46,27 +48,35 @@ public class SelectSoundActivity extends BaseActivity {
             public void run() {
                 keyboardFragment.setSelectMode(true);
                 keyboardFragment.hideFunctionKeys();
-                keyboardFragment.hideUnstressedVowels();
                 if (allowedSounds != null) {
-                    keyboardFragment.setSoundsSelected(allowedSounds);
+                    keyboardFragment.setSoundsSelected(allowedSounds, true);
                 }
+                if (doubleSounds) {
+                    keyboardFragment.hideUnstressedVowels();
+                }
+                adjustCheckboxStates();
             }
         });
     }
 
     @Override
     public void onKeyTouched(String keyString) {
-        Log.d("debug", "keyString: ");
+        adjustCheckboxStates();
     }
 
     public void vowelsBoxClick(View v) {
-            Log.d("debug", "onClickCheckBoxAllVowels: ");
-            keyboardFragment.selectAllVowels(cbAllVowels.isChecked());
+        if (doubleSounds) {
+            keyboardFragment.setSoundsSelected(PhonemeTable.INSTANCE.getAllVowelsWithoutUnstressed(),
+                    cbAllVowels.isChecked());
+        } else {
+            keyboardFragment.setSoundsSelected(PhonemeTable.INSTANCE.getAllVowels(),
+                    cbAllVowels.isChecked());
+        }
     }
 
     public void consonantsBoxClick(View v) {
-        Log.d("debug", "onClickCheckBoxAllConsonants: ");
-        keyboardFragment.selectAllConsonants(cbAllConsonants.isChecked());
+        keyboardFragment.setSoundsSelected(PhonemeTable.INSTANCE.getAllConsonants(),
+                cbAllConsonants.isChecked());
     }
 
     public void okClick(View v) {
@@ -111,5 +121,29 @@ public class SelectSoundActivity extends BaseActivity {
         dialog.setArguments(args);
         dialog.show(getSupportFragmentManager(), "ErrorDialogFragmentTag");
         return;
+    }
+
+    private void adjustCheckboxStates() {
+        ArrayList<String> selected = keyboardFragment.getSelectedSounds();
+        int vcount = 0;
+        int ccount = 0;
+        for (String s: selected) {
+            if (PhonemeTable.INSTANCE.isConsonant(s)) {
+                ccount++;
+            } else {
+                vcount++;
+            }
+        }
+
+        int allVowelsCount = PhonemeTable.INSTANCE.getAllVowels().size();
+        // No unstressed vowels in double sounds practice
+        if (doubleSounds) {
+            allVowelsCount = PhonemeTable.INSTANCE.getAllVowelsWithoutUnstressed().size();
+        }
+        int allConsonantsCount = PhonemeTable.INSTANCE.getAllConsonants().size();
+        Log.d("debug", String.format("%s", selected.toString()));
+        Log.d("debug", String.format("select %d vowels and %d consonants", vcount, ccount));
+        cbAllVowels.setChecked(vcount == allVowelsCount);
+        cbAllConsonants.setChecked(ccount == allConsonantsCount);
     }
 }

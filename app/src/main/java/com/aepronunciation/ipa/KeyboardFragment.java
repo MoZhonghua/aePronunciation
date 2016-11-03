@@ -215,32 +215,18 @@ public class KeyboardFragment extends Fragment implements OnClickListener {
         }
     }
 
-    public void selectAllVowels(boolean select) {
-        for (int i = 0; i < x1Vowels.size(); i++) {
-            RelativeLayout v = x1Vowels.get(i);
-            v.setSelected(select);
-        }
-    }
-
-    public void selectAllConsonants(boolean select) {
-        for (int i = 0; i < x1Consonants.size(); i++) {
-            RelativeLayout v = x1Consonants.get(i);
-            v.setSelected(select);
-        }
-    }
-
-    public void setSoundsSelected(ArrayList<String> sounds) {
+    public void setSoundsSelected(ArrayList<String> sounds, boolean selected) {
         for (int i = 0; i < x1Consonants.size(); i++) {
             RelativeLayout v = x1Consonants.get(i);
             if (sounds.contains(getKeyByViewId(v.getId()))) {
-                v.setSelected(true);
+                v.setSelected(selected);
             }
         }
 
         for (int i = 0; i < x1Vowels.size(); i++) {
             RelativeLayout v = x1Vowels.get(i);
             if (sounds.contains(getKeyByViewId(v.getId()))) {
-                v.setSelected(true);
+                v.setSelected(selected);
             }
         }
     }

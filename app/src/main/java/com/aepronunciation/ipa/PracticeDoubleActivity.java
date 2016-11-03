@@ -53,9 +53,8 @@ public class PracticeDoubleActivity extends BaseActivity implements
 		tvInputWindow = (TextView) findViewById(R.id.tvInputWindow);
 		playButtonImage = (ImageView) findViewById(R.id.ivPlay);
 		doubleSound = new DoubleSound();
-		allowedSounds = PhonemeTable.INSTANCE.getAllVowels();
+		allowedSounds = PhonemeTable.INSTANCE.getAllVowelsWithoutUnstressed();
 		allowedSounds.addAll(PhonemeTable.INSTANCE.getAllConsonants());
-
 
 		// Set up fragment
 		fragmentManager = getSupportFragmentManager();
@@ -83,8 +82,8 @@ public class PracticeDoubleActivity extends BaseActivity implements
 		tvInputWindow.post(new Runnable() {
 			public void run() {
 				keyboardFragment.hideFunctionKeys();
-				keyboardFragment.hideUnstressedVowels();
 				keyboardFragment.showKeysInList(allowedSounds);
+                keyboardFragment.hideUnstressedVowels();
 			}
 		});
 	}
@@ -331,6 +330,7 @@ public class PracticeDoubleActivity extends BaseActivity implements
 
         allowedSounds = selected;
 		keyboardFragment.showKeysInList(allowedSounds);
+        keyboardFragment.hideUnstressedVowels();
 
         // redo sound and display
         resetSoundAndDisplay();
